@@ -1,6 +1,9 @@
 package com.ecommerceentity;
 
+import java.io.Serializable;
 
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 public class Client implements Serializable {
 @Id

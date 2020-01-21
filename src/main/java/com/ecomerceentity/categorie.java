@@ -1,4 +1,5 @@
-package com.ecommerceentity;
+
+package com.ecomerceentity;
 
 
 import java.util.Collection;
@@ -72,7 +73,7 @@ private String nom;
 
 
 	public Set<produit> getProduit() {
-		return produit;
+		return (Set<com.ecomerceentity.produit>) produit;
 	}
 
 

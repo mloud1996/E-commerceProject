@@ -1,21 +1,29 @@
 package com.ecommerceentity;
 
 import java.io.Serializable;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.ecomerceentity.produit;
+
 public class Panier implements Serializable {
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 private Map<Long, LigneCommande>
 items=new HashMap<Long, LigneCommande>();
-public void addItem(Produit p, int quantite){
-LigneCommande lc=items.get(p.getIdProduit());
+public void addItem(produit p, int quantite){
+LigneCommande lc=items.get(p.getIdprod());
 if(lc==null){
 LigneCommande art=new LigneCommande();
-art.setProduit(p);
+art.setProduit(produit p);
 art.setQuantite(quantite);
 art.setPrix(p.getPrix());
-items.put(p.getIdProduit(), art);
+items.put(p.getIdprod(), art);
 }
 else{
-lc.setQuantite(lc.getQuantite()+quantite);
+lc.setQuantite(lc.getQua(produit(produitntite()+quantite);
 }
 
 	public Map<Long, LigneCommande> getItems() {
